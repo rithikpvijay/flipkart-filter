@@ -16,6 +16,10 @@
   --color-black-text: #212121;
   --color-grey-strike: #878787;
   --color-plus-gold: #ffe500;
+  --color-border-grey: #f0f0f0;
+  --color-checkbox-grey: #c2c2c2;
+  --color-textbox-gray: #e0e0e0;
+  --color-textbox-content: #878787;
 
   /* Shawdow */
   --shadow-box: 0 1px 8px 0 rgba(0, 0, 0, 0.06);

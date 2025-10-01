@@ -1,10 +1,11 @@
 import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 function Applayout() {
   return (
-    <div className="grid grid-cols-[16rem_1fr] items-start ">
+    <div className="grid grid-cols-[280px_1fr] items-start ">
       <Header />
-      <div className="mr-2 bg-white shadow-box">sidebar</div>
+      <Sidebar />
       <main className="bg-white shadow-box">main</main>
       <footer className="bg-white col-span-full mt-3 shadow-box">footer</footer>
     </div>

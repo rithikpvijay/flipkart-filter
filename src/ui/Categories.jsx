@@ -27,8 +27,11 @@ function Categories() {
     <div className="shadow-catogery-box">
       <div className="flex h-[40px] max-w-[1200px] mx-auto justify-between">
         {items.map((item, i) => (
-          <div className="flex items-center group gap-2 cursor-pointer hover:text-brand-blue transition">
-            <span className="font-bold text-[13px] ">{item} </span>
+          <div
+            key={i}
+            className="flex items-center group gap-2 cursor-pointer hover:text-brand-blue transition"
+          >
+            <span className="font-semibold text-[13px] ">{item} </span>
             {i !== items.length - 1 && i != items.length - 2 ? (
               <img
                 src={`src/${downArrow}`}
