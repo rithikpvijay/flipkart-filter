@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Main from "./Main";
 import Sidebar from "./Sidebar";
 
 function Applayout() {
@@ -6,7 +7,8 @@ function Applayout() {
     <div className="grid grid-cols-[280px_1fr] items-start ">
       <Header />
       <Sidebar />
-      <main className="bg-white shadow-box">main</main>
+      <Main />
+
       <footer className="bg-white col-span-full mt-3 shadow-box">footer</footer>
     </div>
   );

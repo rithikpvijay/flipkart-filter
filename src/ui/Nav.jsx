@@ -33,9 +33,9 @@ function Nav() {
   } = navData;
 
   return (
-    <div className="bg-brand-blue">
-      <div className="flex items-center gap-4 h-[56px] max-w-[1200px] mx-auto">
-        <div className="text-white flex flex-col ml-11">
+    <div className="bg-brand-blue w-full fixed z-10">
+      <div className="flex items-center  h-[56px] max-w-[1200px] mx-auto">
+        <div className="text-white flex flex-col ml-13 mr-[12px]">
           <img
             src={`src/${icons.flipkartText}`}
             alt="icon of flipkart"
@@ -52,7 +52,7 @@ function Nav() {
           </Link>
         </div>
 
-        <div className="w-[564px] flex shadow-text-box rounded-l-sm  mr-2">
+        <div className="w-[553px] flex shadow-text-box rounded-l-sm  ">
           <input
             type="text"
             className="bg-white px-[16px] h-[36px] w-full outline-0 text-[13px]  border-0 "
@@ -67,17 +67,17 @@ function Nav() {
         </div>
 
         <div>
-          <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mr-6">
+          <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5">
             Login
           </Link>
         </div>
 
         <Link>
-          <div className="text-white text-[15px] font-semibold mr-6">
+          <div className="text-white text-[15px] font-semibold mx-5">
             {navText[0]}
           </div>
         </Link>
-        <Link className="flex items-center justify-center gap-2 mr-8 group">
+        <Link className="flex items-center justify-center gap-2 mx-5 group">
           <div className="text-white text-[15px] font-semibold">
             {navText[1]}
           </div>
@@ -89,7 +89,7 @@ function Nav() {
             className="h-[8px] w-[4.7px] rotate-270  group-hover:rotate-90 transition-transform duration-100"
           />
         </Link>
-        <Link className="flex items-center justify-center gap-2 ">
+        <Link className="flex items-center justify-center gap-2 mx-5">
           <img
             src={`src/${navIcon2}`}
             //   src="src/assets/icons/arrow-white.svg"

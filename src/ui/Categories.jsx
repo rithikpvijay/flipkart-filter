@@ -24,7 +24,7 @@ function Categories() {
   const { items, downArrow } = categories;
 
   return (
-    <div className="shadow-catogery-box">
+    <div className="shadow-catogery-box mt-14">
       <div className="flex h-[40px] max-w-[1200px] mx-auto justify-between">
         {items.map((item, i) => (
           <div

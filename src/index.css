@@ -33,3 +33,13 @@
     color: var(--color-black-text);
   }
 }
+
+@layer components {
+  .main-sort {
+    @apply py-2 mx-2.5 cursor-pointer border-b border-border-grey;
+  }
+
+  .main-sort-highlight {
+    @apply border-b-2 border-brand-blue text-brand-blue font-semibold;
+  }
+}

@@ -1,5 +1,5 @@
-import Brand from "../features/Brand";
-import Ram from "../features/Ram";
+import FilterItem from "../features/FilterItem";
+import Storage from "../features/Storage";
 
 function Filter() {
   return (
@@ -8,8 +8,9 @@ function Filter() {
         <p className="text-[17px] font-semibold ">Filters</p>
       </div>
       <div>
-        <Brand />
-        <Ram />
+        <FilterItem specification="brand" searchBar={true} />
+        <FilterItem specification="ram" />
+        <Storage />
       </div>
     </div>
   );

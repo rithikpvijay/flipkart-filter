@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function GetSmartPhone() {
+function useSmartPhone() {
   const [data, setData] = useState(null);
   useEffect(() => {
     async function fetchData() {
@@ -10,7 +10,7 @@ function GetSmartPhone() {
         if (!res.ok) throw new Error("Something went wrong with fetching nav");
         const data = await res.json();
 
-        setData(data);
+        setData(data.products.productItems);
       } catch (error) {
         console.error(error.message);
       }
@@ -21,4 +21,4 @@ function GetSmartPhone() {
   return { data };
 }
 
-export default GetSmartPhone;
+export default useSmartPhone;

@@ -43,7 +43,7 @@
       {
         "id": 1001,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 4,
         "title": "Apple iPhone 15 (Black, 128 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -365,7 +365,7 @@
       {
         "id": 1015,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 8,
         "title": "Apple iPhone 15 Plus (Blue, 128 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -806,7 +806,7 @@
       {
         "id": 1034,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 4,
         "title": "Apple iPhone 13 (Midnight, 256 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -898,7 +898,7 @@
       {
         "id": 1038,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 6,
         "title": "Apple iPhone 15 (Green, 256 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -966,7 +966,7 @@
       {
         "id": 1041,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 4,
         "title": "Apple iPhone 14 Plus (Starlight, 128 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -1080,7 +1080,7 @@
       {
         "id": 1046,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 8,
         "title": "Apple iPhone 15 Plus (Pink, 128 GB)",
         "stock": "IN_STOCK",
         "highlights": [
@@ -1263,7 +1263,7 @@
       {
         "id": 1054,
         "brand": "Apple",
-        "ram": 0,
+        "ram": 6,
         "title": "Apple iPhone 15 (Yellow, 128 GB)",
         "stock": "IN_STOCK",
         "highlights": [

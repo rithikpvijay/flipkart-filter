@@ -1,16 +1,19 @@
+import { useState } from "react";
 import arrowIcon from "../assets/icons/arrow-gray.svg";
 import searchGray from "../assets/icons/search-gray.svg";
 import DisplayItem from "./DisplayItem";
 
-function Displayfeature({ items, isExpand, handleClick, searchBar = false }) {
-  console.log(isExpand);
+function Displayfeature({ title, items, searchBar }) {
+  const [isExpand, setIsExpand] = useState(false);
   return (
-    <div
-      className="px-4 py-4  border-b-1 border-border-grey cursor-pointer"
-      onClick={handleClick}
-    >
-      <div className="flex items-center justify-between ">
-        <div className=" text-[12px] uppercase font-semibold ">Brand</div>
+    <div className="border-b-1 border-border-grey cursor-pointer">
+      <div
+        className={`px-4  flex items-center justify-between ${
+          !isExpand ? "py-4" : "pt-4 pb-1"
+        }`}
+        onClick={() => setIsExpand((exp) => !exp)}
+      >
+        <div className=" text-[12px] uppercase font-semibold ">{title}</div>
         <img
           src={arrowIcon}
           alt="icon"
@@ -20,9 +23,9 @@ function Displayfeature({ items, isExpand, handleClick, searchBar = false }) {
         />
       </div>
       {isExpand && (
-        <>
+        <div className="px-4">
           {searchBar && (
-            <div className="relative mt-1">
+            <div className="relative">
               <img
                 src={searchGray}
                 alt="search icon"
@@ -35,12 +38,12 @@ function Displayfeature({ items, isExpand, handleClick, searchBar = false }) {
               />
             </div>
           )}
-          <div className="mt-2">
+          <div className="mt-1">
             {items.map((item) => (
               <DisplayItem item={item} key={item} />
             ))}
           </div>
-        </>
+        </div>
       )}
     </div>
   );
