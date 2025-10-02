@@ -2,9 +2,11 @@ import { useState } from "react";
 import arrowIcon from "../assets/icons/arrow-gray.svg";
 import searchGray from "../assets/icons/search-gray.svg";
 import DisplayItem from "./DisplayItem";
+import { useSearchParams } from "react-router-dom";
 
 function Displayfeature({ title, items, searchBar }) {
-  const [isExpand, setIsExpand] = useState(false);
+  const [searchParam] = useSearchParams();
+  const [isExpand, setIsExpand] = useState(!!searchParam.getAll(title).length);
   return (
     <div className="border-b-1 border-border-grey cursor-pointer">
       <div
@@ -40,7 +42,7 @@ function Displayfeature({ title, items, searchBar }) {
           )}
           <div className="mt-1">
             {items.map((item) => (
-              <DisplayItem item={item} key={item} />
+              <DisplayItem item={item} key={item} title={title} />
             ))}
           </div>
         </div>
