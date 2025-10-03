@@ -2,7 +2,7 @@ import useSmartPhone from "../hooks/useSmartPhone";
 
 import Displayfeature from "../ui/Displayfeature";
 
-function FilterItem({ specification, searchBar = false }) {
+function FilterItem({ specification, isSearchBar = false }) {
   const { data } = useSmartPhone();
   if (!data) return null;
 
@@ -15,7 +15,11 @@ function FilterItem({ specification, searchBar = false }) {
   const items = uniqueProducts.map((product) => product[specification]);
 
   return (
-    <Displayfeature items={items} searchBar={searchBar} title={specification} />
+    <Displayfeature
+      items={items}
+      isSearchBar={isSearchBar}
+      title={specification}
+    />
   );
 }
 export default FilterItem;

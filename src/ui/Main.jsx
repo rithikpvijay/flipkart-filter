@@ -44,7 +44,6 @@ function Main() {
   }
 
   console.log(filterRam);
-
   return (
     <main className="bg-white shadow-box ">
       <MainDisplay

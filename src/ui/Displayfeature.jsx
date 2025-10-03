@@ -1,12 +1,38 @@
 import { useState } from "react";
 import arrowIcon from "../assets/icons/arrow-gray.svg";
-import searchGray from "../assets/icons/search-gray.svg";
+
 import DisplayItem from "./DisplayItem";
 import { useSearchParams } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
-function Displayfeature({ title, items, searchBar }) {
+import ClearSingleFilter from "./ClearSingleFilter";
+
+function Displayfeature({ title, items, isSearchBar }) {
   const [searchParam] = useSearchParams();
   const [isExpand, setIsExpand] = useState(!!searchParam.getAll(title).length);
+  const [query, setQuery] = useState("");
+
+  let selected = searchParam.getAll(title);
+
+  selected = selected.map((value) =>
+    !isNaN(Number(value)) ? Number(value) : value
+  );
+
+  let queryItems = [
+    ...items.filter((item) => selected.includes(item)),
+    ...items.filter((item) => !selected.includes(item)),
+  ];
+
+  function handleSearch(e) {
+    setQuery(e.target.value);
+  }
+
+  if (query) {
+    queryItems = items.filter((item) =>
+      item.toLowerCase().includes(query.toLowerCase())
+    );
+  }
+
   return (
     <div className="border-b-1 border-border-grey cursor-pointer">
       <div
@@ -26,23 +52,11 @@ function Displayfeature({ title, items, searchBar }) {
       </div>
       {isExpand && (
         <div className="px-4">
-          {searchBar && (
-            <div className="relative">
-              <img
-                src={searchGray}
-                alt="search icon"
-                className="w-[12px] h-[20px] absolute top-1"
-              />
-              <input
-                placeholder="Search Brand"
-                type="text"
-                className="outline-0 border-b-2 border-b-textbox-gray h-[20px] text-[13px] text-textbox-content w-full focus:border-brand-blue pl-[21px] placeholder:text-textbox-content "
-              />
-            </div>
-          )}
+          <ClearSingleFilter title={title} />
+          {isSearchBar && <SearchBar query={query} onSearch={handleSearch} />}
           <div className="mt-1">
-            {items.map((item) => (
-              <DisplayItem item={item} key={item} title={title} />
+            {queryItems.map((item) => (
+              <DisplayItem item={item} key={item} title={title} query={query} />
             ))}
           </div>
         </div>

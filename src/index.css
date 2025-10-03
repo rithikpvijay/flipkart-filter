@@ -23,7 +23,7 @@
 
   /* Shawdow */
   --shadow-box: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
-  --shadow-text-box: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  --shadow-text-box: 0 2px 4px 0 hsla(0, 0%, 100%, 0.5);
   --shadow-catogery-box: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
 }
 
@@ -31,6 +31,7 @@
   body {
     background-color: var(--color-body);
     color: var(--color-black-text);
+    line-height: 1.4;
   }
 }
 

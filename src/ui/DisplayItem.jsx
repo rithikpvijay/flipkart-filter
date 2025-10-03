@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-function DisplayItem({ item, title }) {
+function DisplayItem({ item, title, query }) {
   const [isChecked, setIschecked] = useState(false);
   const [searchParam, setSearchParam] = useSearchParams();
 
-  console.log(searchParam.getAll(title));
   function handleCheck(e) {
     setIschecked((check) => !check);
     const selected = searchParam.getAll(title);

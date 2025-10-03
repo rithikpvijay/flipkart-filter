@@ -6,7 +6,7 @@ function MainData({ item }) {
       className="pt-[24px] pb-[30px] pl-[30px] border-b border-border-grey"
       key={item.id}
     >
-      <Link className="flex items-start">
+      <Link className="flex items-start group">
         <div>
           <div className="h-[200px] w-[200px] relative">
             <img src={item.image} className="max-h-full max-w-full  mx-auto " />
@@ -32,7 +32,9 @@ function MainData({ item }) {
           </div>
         </div>
         <div className="pl-[25px] w-[51%]">
-          <div className="text-[18px] font-semibold">{item.title}</div>
+          <div className="text-[18px] font-semibold group-hover:text-brand-blue">
+            {item.title}
+          </div>
           <div className="flex items-center mt-1.5">
             <span className="bg-green-rating text-white py-[2px] pl-2 pr-[18px] text-[11px] inline-block rounded-[4px] relative font-semibold">
               {item.rating.average.toFixed(1)}
