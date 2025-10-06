@@ -1,8 +1,11 @@
-import FilterItem from "../features/FilterItem";
-import Storage from "../features/Storage";
-import FilterClear from "./FilterTag";
 import FilterClearAll from "./ClearAllFilters";
-
+import Rating from "../features/Rating";
+import Brand from "../features/Brand";
+import Ram from "../features/Ram";
+import FilterTag from "./FilterTag";
+import Discount from "../features/Discount";
+import FilterCategory from "../features/FilterCategory";
+import Price from "../features/Price";
 function Filter() {
   return (
     <div>
@@ -11,12 +14,15 @@ function Filter() {
           <div className="text-[17px] font-semibold ">Filters</div>
           <FilterClearAll />
         </div>
-        <FilterClear />
+        <FilterTag />
       </div>
       <div>
-        <FilterItem specification="brand" isSearchBar={true} />
-        <FilterItem specification="ram" />
-        <Storage />
+        <FilterCategory />
+        <Brand />
+        <Ram />
+        <Price />
+        <Rating />
+        <Discount />
       </div>
     </div>
   );

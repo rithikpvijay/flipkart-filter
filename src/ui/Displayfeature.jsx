@@ -6,22 +6,25 @@ import { useSearchParams } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 import ClearSingleFilter from "./ClearSingleFilter";
+import useSelectedOption from "../hooks/useSelectedOption";
 
-function Displayfeature({ title, items, isSearchBar }) {
+function Displayfeature({ title, items, isSearchBar = false }) {
   const [searchParam] = useSearchParams();
   const [isExpand, setIsExpand] = useState(!!searchParam.getAll(title).length);
   const [query, setQuery] = useState("");
 
-  let selected = searchParam.getAll(title);
+  // let selected = searchParam.getAll(title);
 
-  selected = selected.map((value) =>
-    !isNaN(Number(value)) ? Number(value) : value
-  );
+  // selected = selected.map((value) =>
+  //   !isNaN(Number(value)) ? Number(value) : value
+  // );
 
-  let queryItems = [
-    ...items.filter((item) => selected.includes(item)),
-    ...items.filter((item) => !selected.includes(item)),
-  ];
+  // let queryItems = [
+  //   ...items.filter((item) => selected.includes(item)),
+  //   ...items.filter((item) => !selected.includes(item)),
+  // ];
+
+  let { queryItems } = useSelectedOption(title, items);
 
   function handleSearch(e) {
     setQuery(e.target.value);

@@ -41,23 +41,23 @@ function Nav() {
             alt="icon of flipkart"
             className="w-[75px]"
           />
-          <Link className="italic relative text-[10px] hover:underline">
+          <Link className="italic relative text-[10px] hover:underline font-[400px] tracking-wide">
             {explore}
             <span className="text-plus-gold font-semibold"> {plus}</span>
             <img
               src={`src/${icons.plusIcon}`}
               alt="text of plus"
-              className="w-[10px] block absolute left-15 top-0"
+              className="w-[10px] block absolute left-16 top-0"
             />
           </Link>
         </div>
 
-        <div className="w-[553px] flex shadow-text-box rounded-l-sm  ">
+        <div className="w-[555px] flex shadow-text-box rounded-l-sm  ">
           <input
             type="text"
             className="bg-white px-[16px] h-[36px] w-full outline-0 text-[13px]  border-0 "
           />
-          <button className="cursor-pointer h-[36px] w-[44px]  bg-white flex items-center justify-center">
+          <button className="cursor-pointer h-[36px] w-[44px]  bg-white flex items-center justify-center pr-1">
             <img
               src={`src/${icons.searchBlue}`}
               alt="image of search icon"
@@ -67,8 +67,8 @@ function Nav() {
         </div>
 
         <div>
-          <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5">
-            Login
+          <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5 ">
+            <span className="text-[15px]">Login</span>
           </Link>
         </div>
 
