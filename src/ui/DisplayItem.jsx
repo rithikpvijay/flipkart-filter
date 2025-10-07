@@ -17,7 +17,11 @@ function DisplayItem({ item, title, query }) {
       ? selected.filter((param) => param !== e.target.value)
       : [...selected, e.target.value];
 
-    const entries = [...searchParam.entries()].filter(([key]) => key !== title);
+    const entries = [...searchParam.entries()].filter(
+      ([key]) => key !== title && key !== "page"
+    );
+
+    entries.push(["page", 1]);
 
     updated.forEach((param) => entries.push([title, param]));
     setSearchParam(new URLSearchParams(entries));

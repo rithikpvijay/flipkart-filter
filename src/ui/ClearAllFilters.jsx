@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 function FilterClearAll() {
   const [searchParam, setSearchParam] = useSearchParams();
   const isSearchParam = [...searchParam.entries()].filter(
-    ([key]) => key !== "sort"
+    ([key]) => key !== "sort" && key !== "page"
   ).length;
 
   if (!isSearchParam) return null;

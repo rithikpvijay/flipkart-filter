@@ -28,7 +28,7 @@ function Price() {
 
   function handleClick() {
     const updateParam = [...searchParams.entries()].filter(
-      ([key]) => key !== "price"
+      ([key]) => key !== "price" && key !== "page"
     );
     setSearchParams(new URLSearchParams(updateParam));
   }
@@ -47,6 +47,8 @@ function Price() {
 
     // searchParams.set("max", updatedValue[1]);
     searchParams.set("price", updatedValue);
+    searchParams.set("page", 1);
+
     setSearchParams(searchParams);
   };
 
@@ -62,6 +64,7 @@ function Price() {
     updateValue = [e.target.value, max ? max : 30000];
     setValue(updateValue);
     searchParams.set("price", updateValue);
+    searchParams.set("page", 1);
     setSearchParams(searchParams);
   }
 
@@ -76,6 +79,8 @@ function Price() {
     updateValue = [min ? min : 0, e.target.value];
     setValue(updateValue);
     searchParams.set("price", updateValue);
+    searchParams.set("page", 1);
+
     setSearchParams(searchParams);
   }
 

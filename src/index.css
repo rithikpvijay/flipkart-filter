@@ -45,4 +45,8 @@
   .main-sort-highlight {
     @apply border-b-2 border-brand-blue text-brand-blue font-semibold;
   }
+
+  .pagination-active {
+    @apply bg-brand-blue  flex items-center justify-center rounded-full text-white;
+  }
 }

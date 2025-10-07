@@ -1,5 +1,5 @@
 function getFilteredDiscount(selectedDiscounts, data) {
-  if (!selectedDiscounts.length) return data;
+  if (!selectedDiscounts?.length) return data;
   return data.filter((data) =>
     selectedDiscounts.some(
       (discount) =>

@@ -1,6 +1,7 @@
 import MainNav from "./MainNav";
+import MainText from "./MainText";
 
-function MainFilter({ filterValue, handleClick }) {
+function MainFilter({ filterValue, handleClick, count }) {
   return (
     <div className="px-4 py-3 pb-0 border-b border-border-grey">
       <div className="text-[11px] text-textbox-content flex items-center">
@@ -8,11 +9,7 @@ function MainFilter({ filterValue, handleClick }) {
         <MainNav text="Mobiles & A..." />
         <MainNav text="Mobiles" />
       </div>
-      <div className="mt-2">
-        <span className="font-semibold text-[16px]">
-          Showing 1 – 24 of 7,762 results for "smartphone"
-        </span>
-      </div>
+      <MainText count={count} />
       <div className="flex  text-[13px] ">
         <div className="pt-2 pr-2.5 pb-1 font-semibold ">Sort By</div>
         <div

@@ -8,7 +8,7 @@ function FilterTag() {
   const [searchParam, setSearchParam] = useSearchParams();
 
   const clearItems = [...searchParam.entries()].filter(
-    ([key]) => key !== "sort"
+    ([key]) => key !== "sort" && key !== "page"
   );
 
   function handleClick(item) {

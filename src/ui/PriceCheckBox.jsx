@@ -1,9 +1,6 @@
-import { useState } from "react";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import { useSearchParams } from "react-router-dom";
 
 function PriceCheckBox({ value, onMin, onMax }) {
-  const [searchParams, setSearchParams] = useSearchParams();
   let [minValue, maxValue] = value;
 
   return (
@@ -29,7 +26,7 @@ function PriceCheckBox({ value, onMin, onMax }) {
           </option>
         </select>
 
-        <MdOutlineArrowDropDown className="h-6 w-6 absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+        <MdOutlineArrowDropDown className="h-6 w-6 absolute right-0.5 top-1/2 transform -translate-y-1/2 pointer-events-none" />
       </div>
       <span className="text-[13px] text-grey-strike">to</span>
 
@@ -53,7 +50,7 @@ function PriceCheckBox({ value, onMin, onMax }) {
           </option>
           <option value="30000">₹30000+</option>
         </select>
-        <MdOutlineArrowDropDown className="h-6 w-6 absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none" />
+        <MdOutlineArrowDropDown className="h-6 w-6 absolute right-0.5 top-1/2 transform -translate-y-1/2 pointer-events-none" />
       </div>
     </div>
   );

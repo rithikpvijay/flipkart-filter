@@ -8,14 +8,18 @@ import getFilteredBrand from "../helper/getFilteredBrand";
 import getFilteredRam from "../helper/getFilteredRam";
 import getFilteredRating from "../helper/getFilteredRating";
 import getFilteredDiscount from "../helper/getFilteredDiscount";
+import getPriceRange from "../helper/getPriceRange";
+import Pagination from "./Pagination";
 
 function Main() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { data } = useSmartPhone();
   if (!data) return null;
+  const count = data.length;
 
   function handleClick(value) {
     searchParams.set("sort", value);
+    searchParams.set("page", 1);
     setSearchParams(searchParams);
   }
 
@@ -38,14 +42,7 @@ function Main() {
   );
 
   const selectedPriceRange = searchParams.get("price");
-  let filteredPrice = filteredDiscount;
-  if (selectedPriceRange?.length) {
-    let [min, max] = selectedPriceRange.split(",");
-    if (max === "30000") max = 10000000;
-    max = filteredPrice = filteredPrice.filter(
-      (data) => min <= data.price && max >= data.price
-    );
-  }
+  const filteredPrice = getPriceRange(selectedPriceRange, filteredDiscount);
 
   return (
     <main className="bg-white shadow-box ">
