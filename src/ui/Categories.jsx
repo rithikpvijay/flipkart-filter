@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Menus from "./Menus";
+import LoginDisplay from "./LoginDisplay";
+import { Link } from "react-router-dom";
 
 function Categories() {
   const [categories, setCategories] = useState(null);
@@ -31,7 +34,7 @@ function Categories() {
             key={i}
             className="flex items-center group gap-2 cursor-pointer hover:text-brand-blue transition"
           >
-            <span className="font-semibold text-[13px] ">{item} </span>
+            <Link className="font-semibold text-[13px] ">{item} </Link>
             {i !== items.length - 1 && i != items.length - 2 ? (
               <img
                 src={`src/${downArrow}`}

@@ -3,6 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Sidebar from "./Sidebar";
 import ErrorPage from "./ErrorPage";
+import LoginDisplay from "./LoginDisplay";
 
 function Applayout() {
   return (

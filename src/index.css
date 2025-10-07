@@ -21,12 +21,14 @@
   --color-textbox-gray: #e0e0e0;
   --color-textbox-content: #878787;
   --color-border-price: #bababa;
+  --color-menu-hover: #fafafa;
 
   /* Shawdow */
   --shadow-box: 0 1px 8px 0 rgba(0, 0, 0, 0.06);
   --shadow-text-box: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
   --shadow-catogery-box: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
   --shadow-filter-clear: 0 2px 4px 0 hsla(0, 0%, 100%, 0.5);
+  --shadow-menu-box: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 @layer base {

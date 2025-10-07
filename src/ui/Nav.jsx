@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Menus from "./Menus";
+import LoginDisplay from "./LoginDisplay";
 
 function Nav() {
   const [navData, setNavData] = useState(null);
@@ -66,11 +68,20 @@ function Nav() {
           </button>
         </div>
 
-        <div>
-          <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5 ">
-            <span className="text-[15px]">Login</span>
-          </Link>
-        </div>
+        <Menus>
+          <Menus.Wrapper id="login">
+            <Menus.Toggle id="login">
+              <div>
+                <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5">
+                  <span className="text-[15px]">Login</span>
+                </Link>
+              </div>
+            </Menus.Toggle>
+            <Menus.List id="login">
+              <LoginDisplay />
+            </Menus.List>
+          </Menus.Wrapper>
+        </Menus>
 
         <Link>
           <div className="text-white text-[15px] font-semibold mx-5">
