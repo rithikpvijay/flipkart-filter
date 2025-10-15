@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function LoginDisplay() {
   return (
-    <div className="bg-white mt-4 shadow-menu-box relative">
+    <div className="bg-white mt-6 shadow-menu-box relative">
       <RiArrowUpFill className="text-white w-8 h-8 absolute left-1/2 -translate-x-1/2 -top-4" />
 
       <div className="p-5 flex text-[14px] gap-10 items-center font-semibold">
@@ -14,7 +14,7 @@ function LoginDisplay() {
       <ul className="border-t border-border-grey text-[13px]">
         <li className="border-b border-border-grey">
           <Link className="flex items-center gap-2 px-3 py-4 hover:bg-menu-hover">
-            <FaUserCircle className="text-brand-blue" />
+            <FaUserCircle className="text-brand-blue w-[16px] h-[14px]" />
             <div>My Profile</div>
           </Link>
         </li>

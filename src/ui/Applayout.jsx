@@ -4,6 +4,7 @@ import Main from "./Main";
 import Sidebar from "./Sidebar";
 import ErrorPage from "./ErrorPage";
 import LoginDisplay from "./LoginDisplay";
+import MoreDisplay from "./MoreDisplay";
 
 function Applayout() {
   return (
@@ -13,10 +14,6 @@ function Applayout() {
         <Sidebar />
 
         <Main />
-
-        <footer className="bg-white col-span-full mt-3 shadow-box">
-          footer
-        </footer>
       </div>
     </div>
   );

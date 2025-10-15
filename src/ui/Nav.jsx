@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Menus from "./Menus";
 import LoginDisplay from "./LoginDisplay";
+import MoreDisplay from "./MoreDisplay";
 
 function Nav() {
   const [navData, setNavData] = useState(null);
@@ -54,7 +55,7 @@ function Nav() {
           </Link>
         </div>
 
-        <div className="w-[555px] flex shadow-text-box rounded-l-sm  ">
+        <div className="w-[555px] flex shadow-text-box rounded-l-sm mr-5 ">
           <input
             type="text"
             className="bg-white px-[16px] h-[36px] w-full outline-0 text-[13px]  border-0 "
@@ -70,9 +71,9 @@ function Nav() {
 
         <Menus>
           <Menus.Wrapper id="login">
-            <Menus.Toggle id="login">
+            <Menus.Toggle>
               <div>
-                <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb] mx-5">
+                <Link className="bg-white text-brand-blue font-semibold py-[5px] px-[40px] rounded-xs cursor-pointer border [border-color:#dbdbdb]">
                   <span className="text-[15px]">Login</span>
                 </Link>
               </div>
@@ -84,23 +85,34 @@ function Nav() {
         </Menus>
 
         <Link>
-          <div className="text-white text-[15px] font-semibold mx-5">
+          <div className="text-white text-[15px] font-semibold  mx-10">
             {navText[0]}
           </div>
         </Link>
-        <Link className="flex items-center justify-center gap-2 mx-5 group">
-          <div className="text-white text-[15px] font-semibold">
-            {navText[1]}
-          </div>
+        <Menus>
+          <Menus.Wrapper id="more">
+            <div className="group ">
+              <Menus.Toggle>
+                <Link className="flex items-center justify-center gap-2 ">
+                  <div className="text-white text-[15px] font-semibold">
+                    {navText[1]}
+                  </div>
 
-          <img
-            src={`src/${navIcon1}`}
-            //   src="src/assets/icons/arrow-white.svg"
-            alt="image of search icon"
-            className="h-[8px] w-[4.7px] rotate-270  group-hover:rotate-90 transition-transform duration-100"
-          />
-        </Link>
-        <Link className="flex items-center justify-center gap-2 mx-5">
+                  <img
+                    src={`src/${navIcon1}`}
+                    //   src="src/assets/icons/arrow-white.svg"
+                    alt="image of search icon"
+                    className="h-[8px] w-[4.7px] rotate-270  group-hover:rotate-90 transition-transform duration-100"
+                  />
+                </Link>
+              </Menus.Toggle>
+              <Menus.List id="more">
+                <MoreDisplay />
+              </Menus.List>
+            </div>
+          </Menus.Wrapper>
+        </Menus>
+        <Link className="flex items-center justify-center gap-2 mr-5 ml-10">
           <img
             src={`src/${navIcon2}`}
             //   src="src/assets/icons/arrow-white.svg"
