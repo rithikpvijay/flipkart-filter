@@ -62,7 +62,7 @@ function Nav() {
           />
           <button className="cursor-pointer h-[36px] w-[44px]  bg-white flex items-center justify-center pr-1">
             <img
-              src={`src/${icons.searchBlue}`}
+              src="assets/icons/search-icon.svg"
               alt="image of search icon"
               className="h-5 w-5"
             />
