@@ -9,7 +9,7 @@ function Nav() {
   useEffect(() => {
     async function fetchNav() {
       try {
-        const res = await fetch("/mobiles.json");
+        const res = await fetch("data/mobiles.json");
 
         if (!res.ok) throw new Error("Something went wrong with fetching nav");
         const data = await res.json();
@@ -40,7 +40,7 @@ function Nav() {
       <div className="flex items-center  h-[56px] max-w-[1200px] mx-auto">
         <div className="text-white flex flex-col ml-13 mr-[12px]">
           <img
-            src={`src/${icons.flipkartText}`}
+            src="assets/pictures/flipkart.png"
             alt="icon of flipkart"
             className="w-[75px]"
           />
@@ -48,7 +48,7 @@ function Nav() {
             {explore}
             <span className="text-plus-gold font-semibold"> {plus}</span>
             <img
-              src={`src/${icons.plusIcon}`}
+              src="assets/icons/plus.png"
               alt="text of plus"
               className="w-[10px] block absolute left-16 top-0"
             />
@@ -99,7 +99,7 @@ function Nav() {
                   </div>
 
                   <img
-                    src={`src/${navIcon1}`}
+                    src="assets/icons/arrow-white.svg"
                     //   src="src/assets/icons/arrow-white.svg"
                     alt="image of search icon"
                     className="h-[8px] w-[4.7px] rotate-270  group-hover:rotate-90 transition-transform duration-100"
@@ -114,7 +114,7 @@ function Nav() {
         </Menus>
         <Link className="flex items-center justify-center gap-2 mr-5 ml-10">
           <img
-            src={`src/${navIcon2}`}
+            src="assets/icons/cart.svg"
             //   src="src/assets/icons/arrow-white.svg"
             alt="image of search icon"
             className="h-[16px] w-[16px]"

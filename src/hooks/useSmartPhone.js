@@ -5,7 +5,7 @@ function useSmartPhone() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("/mobiles.json");
+        const res = await fetch("data/mobiles.json");
 
         if (!res.ok) throw new Error("Something went wrong with fetching nav");
         const data = await res.json();

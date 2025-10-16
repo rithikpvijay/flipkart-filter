@@ -8,7 +8,7 @@ function Categories() {
   useEffect(() => {
     async function fetchCategory() {
       try {
-        const res = await fetch("/mobiles.json");
+        const res = await fetch("data/mobiles.json");
         if (!res.ok)
           throw new Error("Something went wrong while fetching categories");
         const data = await res.json();
@@ -37,7 +37,7 @@ function Categories() {
             <Link className="font-semibold text-[13px] ">{item} </Link>
             {i !== items.length - 1 && i != items.length - 2 ? (
               <img
-                src={`src/${downArrow}`}
+                src="assets/icons/arrow-gray.svg"
                 alt="down arrow icon"
                 className="h-[8px] w-[4.7px] rotate-270  group-hover:rotate-90 transition-transform duration-100 group-hover:text-amber-300"
               />
