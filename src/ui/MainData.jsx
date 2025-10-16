@@ -11,10 +11,7 @@ function MainData({ item }) {
           <div className="h-[200px] w-[200px] relative">
             <img src={item.image} className="max-h-full max-w-full  mx-auto " />
             <div className="absolute top-0 right-0">
-              <img
-                src="src/assets/icons/wishlist-white.svg"
-                className="w-4 h-4"
-              />
+              <img src="/assets/icons/wishlist-white.svg" className="w-4 h-4" />
             </div>
           </div>
           <div className="flex items-center gap-2.5 py-1.5 mt-[16px]">
@@ -79,7 +76,7 @@ function MainData({ item }) {
             </div>
           </div>
           <div className="mt-1.5">
-            <img src="src/assets/icons/assured1.png" className="h-[21px]" />
+            <img src="/assets/icons/assured1.png" className="h-[21px]" />
           </div>
           <div className="col-span-full">
             <div className="text-[13px]">
