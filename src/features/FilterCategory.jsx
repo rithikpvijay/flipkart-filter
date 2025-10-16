@@ -7,7 +7,7 @@ function FilterCategory() {
       <div className="py-[5px] flex items-center">
         <span className="flex items-center">
           <img
-            src="src/assets/icons/arrow-gray.svg"
+            src="assets/icons/arrow-gray.svg"
             alt="icon-arrow"
             className="w-[10px] h-[10px] inline-block mr-[5px] cursor-pointer"
           />
