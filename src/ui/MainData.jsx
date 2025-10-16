@@ -36,7 +36,7 @@ function MainData({ item }) {
             <span className="bg-green-rating text-white py-[2px] pl-2 pr-[18px] text-[11px] inline-block rounded-[4px] relative font-semibold">
               {item.rating.average.toFixed(1)}
               <img
-                src="src/assets/icons/rating-star.svg"
+                src="/assets/icons/rating-star.svg"
                 className="absolute top-[3.75px] left-[27.5px] h-2.5"
               />
             </span>
